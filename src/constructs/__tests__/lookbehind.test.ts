@@ -1,5 +1,4 @@
-import "../../test-utils/index.js";
-import { expect, test } from "bun:test";
+import "../../test-utils/matchers.js";
 
 import { lookbehind, oneOrMore, zeroOrMore } from "../../index.js";
 

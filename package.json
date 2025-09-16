@@ -31,8 +31,7 @@
     "build": "tsup",
     "typecheck": "tsc --noEmit",
     "lint": "eslint",
-    "test": "jest",
-    "validate": "bun run typecheck && bun run lint && bun run test --no-watch",
+    "validate": "bun run typecheck && bun run lint && bun test",
     "release": "release-it"
   },
   "dependencies": {},

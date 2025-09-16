@@ -1,4 +1,4 @@
-import "../../test-utils/index.js";
+import "../../test-utils/matchers.js";
 
 import { buildRegExp, oneOrMore, optional, zeroOrMore } from "../../index.js";
 

@@ -1,4 +1,4 @@
-import "../../test-utils/index.js";
+import "../../test-utils/matchers.js";
 
 import { capture, negativeLookahead, oneOrMore, zeroOrMore } from "../../index.js";
 

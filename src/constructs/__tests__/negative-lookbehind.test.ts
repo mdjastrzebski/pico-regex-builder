@@ -1,4 +1,4 @@
-import "../../test-utils/index.js";
+import "../../test-utils/matchers.js";
 
 import { negativeLookbehind } from "../negative-lookbehind.js";
 import { oneOrMore } from "../quantifiers.js";
