@@ -19,7 +19,7 @@ Only the finest tools in the TypeScript ecosystem:
 ## Quick Start
 
 1. Clone this repo
-2. `pnpm install` (or npm/yarn)
+2. `bun install` (or npm/yarn/pnpm)
 3. Start building!
 
 ## Contributing
@@ -31,5 +31,5 @@ PRs welcome! Keep it awesome.
 MIT 💝
 
 ---
-Made with 💻 and ☕️ by [MDJ](https://x.com/mdj_dev/)
 
+Made with 💻 and ☕️ by [MDJ](https://x.com/mdj_dev/)
