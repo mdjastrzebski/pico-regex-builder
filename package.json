@@ -1,6 +1,6 @@
 {
   "name": "pico-regex-builder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The tiniest and fastest builder for maintainable Regular Expressions (Regex).",
   "type": "module",
   "keywords": [
