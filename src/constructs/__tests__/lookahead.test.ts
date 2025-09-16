@@ -1,3 +1,5 @@
+import "../../test-utils/index.js";
+
 import { capture, lookahead, oneOrMore, zeroOrMore } from "../../index.js";
 
 test("`lookahead` pattern", () => {

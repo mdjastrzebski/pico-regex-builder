@@ -1,3 +1,5 @@
+import "../../test-utils/index.js";
+
 import { capture, negativeLookahead, oneOrMore, zeroOrMore } from "../../index.js";
 
 test("`negativeLookahead` pattern", () => {

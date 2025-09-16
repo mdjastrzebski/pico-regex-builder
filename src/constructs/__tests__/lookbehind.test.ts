@@ -1,3 +1,6 @@
+import "../../test-utils/index.js";
+import { expect, test } from "bun:test";
+
 import { lookbehind, oneOrMore, zeroOrMore } from "../../index.js";
 
 test("`lookbehind` pattern", () => {
@@ -9,15 +12,15 @@ test("`lookbehind` pattern", () => {
 
 test("`lookbehind` matching", () => {
   expect([zeroOrMore(/\s/), /\w/, lookbehind("s"), oneOrMore(/\s/)]).toMatchString(
-    "too many cats to feed."
+    "too many cats to feed.",
   );
 
   expect([lookbehind("USD"), zeroOrMore(/\s/), oneOrMore(/\d/)]).toMatchString(
-    "The price is USD 30"
+    "The price is USD 30",
   );
 
   expect([lookbehind("USD"), zeroOrMore(/\s/), oneOrMore(/\d/)]).not.toMatchString(
-    "The price is CDN 30"
+    "The price is CDN 30",
   );
 
   expect([lookbehind("a"), "b"]).toMatchString("abba");

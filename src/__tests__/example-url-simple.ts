@@ -1,3 +1,5 @@
+import "../test-utils/to-equal-regex.js";
+
 import {
   buildRegExp,
   choiceOf,

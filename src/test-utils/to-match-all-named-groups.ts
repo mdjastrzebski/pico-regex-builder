@@ -1,4 +1,4 @@
-import type { RegexSequence } from "../src/types.js";
+import type { RegexSequence } from "../index.js";
 import { wrapRegExp } from "./utils.js";
 
 export function toMatchAllNamedGroups(

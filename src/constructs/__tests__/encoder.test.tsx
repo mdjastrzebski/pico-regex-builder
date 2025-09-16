@@ -1,3 +1,5 @@
+import "../../test-utils/index.js";
+
 import {
   buildRegExp,
   capture,
@@ -72,7 +74,7 @@ test("`buildRegExp` detects common atomic patterns", () => {
 test("`buildRegExp` throws error on unknown element", () => {
   expect(() =>
     // @ts-expect-error intentionally passing incorrect object
-    buildRegExp({ type: "unknown" })
+    buildRegExp({ type: "unknown" }),
   ).toThrowErrorMatchingInlineSnapshot(`
     "Unsupported element. Received: {
       "type": "unknown"

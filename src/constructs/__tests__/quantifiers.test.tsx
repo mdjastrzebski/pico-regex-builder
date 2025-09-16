@@ -1,3 +1,5 @@
+import "../../test-utils/index.js";
+
 import { buildRegExp, oneOrMore, optional, zeroOrMore } from "../../index.js";
 
 test("`oneOrMore` quantifier pattern", () => {

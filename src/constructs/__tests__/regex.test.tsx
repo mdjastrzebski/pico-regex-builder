@@ -1,3 +1,5 @@
+import "../../test-utils/index.js";
+
 import { regex } from "../../index.js";
 
 test("`regex` no-op pattern", () => {

@@ -1,4 +1,4 @@
-import { lookbehind } from "../../index.js";
+import { lookbehind } from "../index.js";
 import { buildRegExp, endOfString, optional, zeroOrMore } from "../index.js";
 
 const decimalSeparator = ".";
@@ -36,6 +36,6 @@ test("example: extracting currency values", () => {
   expect(currencyRegex).not.toMatchString("£A000");
 
   expect(currencyRegex).toEqualRegex(
-    /(?<=[$€£¥R₿])(?:\s?)(?:\d{1,3})(?:,?(?:\d{3}))*(?:\.(?:\d{2}))?$/
+    /(?<=[$€£¥R₿])(?:\s?)(?:\d{1,3})(?:,?(?:\d{3}))*(?:\.(?:\d{2}))?$/,
   );
 });

@@ -1,3 +1,5 @@
+import "../../test-utils/index.js";
+
 import { choiceOf, oneOrMore, repeat, zeroOrMore } from "../../index.js";
 
 test("`choiceOf` pattern", () => {
@@ -28,12 +30,12 @@ test("`choiceOf` pattern with sequence options", () => {
 test("`choiceOf` pattern using nested regex", () => {
   expect(choiceOf(oneOrMore("a"), zeroOrMore("b"))).toEqualRegex(/a+|b*/);
   expect(choiceOf(repeat("a", { min: 1, max: 3 }), repeat("bx", 5))).toEqualRegex(
-    /a{1,3}|(?:bx){5}/
+    /a{1,3}|(?:bx){5}/,
   );
 });
 
 test("`choiceOf` throws on empty options", () => {
   expect(() => choiceOf()).toThrowErrorMatchingInlineSnapshot(
-    `"Expected at least one alternative"`
+    `"Expected at least one alternative"`,
   );
 });

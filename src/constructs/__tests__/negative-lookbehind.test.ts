@@ -1,3 +1,5 @@
+import "../../test-utils/index.js";
+
 import { negativeLookbehind } from "../negative-lookbehind.js";
 import { oneOrMore } from "../quantifiers.js";
 

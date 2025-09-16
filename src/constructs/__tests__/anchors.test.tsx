@@ -1,3 +1,5 @@
+import "../../test-utils/index.js";
+
 import {
   buildRegExp,
   endOfString,
@@ -34,12 +36,12 @@ test("`wordBoundary` pattern", () => {
 test("`wordBoundary` matching", () => {
   expect(buildRegExp([wordBoundary, "a", zeroOrMore(/\S/)], { global: true })).toMatchGroups(
     "a ba ab aa",
-    ["a", "ab", "aa"]
+    ["a", "ab", "aa"],
   );
 
   expect(buildRegExp([zeroOrMore(/\S/), "a", wordBoundary], { global: true })).toMatchGroups(
     "a ba ab aa",
-    ["a", "ba", "aa"]
+    ["a", "ba", "aa"],
   );
 });
 
@@ -53,11 +55,11 @@ test("`nonWordBoundary` pattern", () => {
 test("`nonWordBoundary` matching", () => {
   expect(buildRegExp([nonWordBoundary, "abc", /\d/], { global: true })).toMatchGroups(
     "abc1 xabc2 xxabc3",
-    ["abc2", "abc3"]
+    ["abc2", "abc3"],
   );
 
   expect(buildRegExp([/\d/, "abc", nonWordBoundary], { global: true })).toMatchGroups(
     "1abc 2abcx 3abcxx",
-    ["2abc", "3abc"]
+    ["2abc", "3abc"],
   );
 });

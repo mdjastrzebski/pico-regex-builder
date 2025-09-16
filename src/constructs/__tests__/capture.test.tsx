@@ -1,3 +1,5 @@
+import "../../test-utils/index.js";
+
 import { buildRegExp, capture, oneOrMore, ref, wordBoundary } from "../../index.js";
 
 test("`capture` pattern", () => {

@@ -1,3 +1,5 @@
+import "../../test-utils/index.js";
+
 import { oneOrMore, repeat, zeroOrMore } from "../../index.js";
 
 test("`repeat` quantifier pattern", () => {
