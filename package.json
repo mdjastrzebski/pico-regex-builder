@@ -1,0 +1,60 @@
+{
+  "name": "@mdjdev/ts-lib-template",
+  "version": "0.1.0",
+  "description": "TypeScript-based library template.",
+  "type": "module",
+  "keywords": [
+    "typescript",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdjastrzebski/ts-lib-template.git"
+  },
+  "author": "Maciej Jastrzębski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdjastrzebski/ts-lib-template/issues"
+  },
+  "homepage": "https://github.com/mdjastrzebski/ts-lib-template#readme",
+  "main": "dist/index.js",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "bin": "./bin.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint",
+    "test": "vitest",
+    "validate": "pnpm typecheck && pnpm lint && pnpm test --no-watch",
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@release-it/conventional-changelog": "^10.0.1",
+    "@types/node": "^24.3.0",
+    "eslint": "^9.34.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^16.3.0",
+    "release-it": "^19.0.4",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.41.0",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "pnpm@10.15.1+sha512.34e538c329b5553014ca8e8f4535997f96180a1d0f614339357449935350d924e22f8614682191264ec33d1462ac21561aff97f6bb18065351c162c7e8f6de67",
+  "publishConfig": {
+    "access": "public"
+  }
+}
